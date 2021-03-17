@@ -1,14 +1,14 @@
-drop database if exists ostoslista;
+drop database if exists shoppinglist;
 
-create database ostoslista;
+create database shoppinglist;
 
-use ostoslista;
+use shoppinglist;
 
-create table lista (
+create table item (
         id int primary key auto_increment,
-        kuvaus text not null,
-        maara int not null
+        description varchar(255) not null,
+        amount smallint unsigned not null
 );
 
-insert into lista (kuvaus, maara) values ('Maito', 2);
-insert into lista (kuvaus, maara) values ('Voi', 1);
+insert into item (description, amount) values ('Maito', 2);
+insert into item (description, amount) values ('Voi', 1);

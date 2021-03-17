@@ -8,7 +8,7 @@ $id = filter_var($input->id, FILTER_SANITIZE_NUMBER_INT);
 try {
     $db=openDb();
 
-    $query = $db->prepare('delete from lista where id=(:id)');
+    $query = $db->prepare('delete from item where id=(:id)');
     $query->bindValue(':id',$id,PDO::PARAM_INT); 
     $query->execute(); 
 
